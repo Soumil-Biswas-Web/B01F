@@ -3,11 +3,9 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://myusername.github.io/B01F",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
-    "clean": "rm -rf dist",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
