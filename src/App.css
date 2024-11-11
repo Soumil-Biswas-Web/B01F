@@ -1,0 +1,67 @@
+.indexPage {
+  background: #FFFFFF;
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  background: #641566;
+}
+
+.headerContainer {
+  margin-right: 20px;
+}
+
+.headerContainer button {
+  background-color: transparent;
+  padding: 10px;
+}
+
+.headerContainer button img{
+  width: 20px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  position: sticky;
+  top: 50px;
+  left: 388px;
+  background-color: white;
+}
+
+.pageFrame {
+  display: grid;
+  grid-template: "a a a a a a";
+  align-items: center;
+  background: #F5F5F5;
+  box-shadow: 0px 4px 4px 0px #00000040;
+  width: 759px;
+  height: 47px;
+  padding: 0 35px;
+  gap: 63px;
+}
+
+.pageFrame a {
+  font-family: Cormorant;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19.38px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: black;
+}
+
+.heroImage {
+  margin-top: 10px;
+  width: 100vw;
+  border: 0.82px solid #C9C9C9;
+  box-shadow: 0px 4px 4px 0px #00000040;
+}
+
+.loginButton {
+  background: #583781;
+}
