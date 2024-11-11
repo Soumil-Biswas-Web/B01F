@@ -25,9 +25,9 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 20px;
+  /* padding: 20px; */
   position: sticky;
-  top: 50px;
+  top: 1px;
   left: 388px;
   background-color: white;
 }
