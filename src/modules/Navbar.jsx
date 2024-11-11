@@ -4,6 +4,7 @@ import insta from "../assets/navBar/img-2.svg"
 import x from "../assets/navBar/img-3.svg"
 import whatsapp from "../assets/navBar/img-4.svg"
 import telegram from "../assets/navBar/img-5.svg"
+
 import theASSignerlogo from "../assets/theASSignerlogo_2.svg"
 
 import heroImage from "../assets/image1.png"
@@ -33,7 +34,13 @@ function Navbar(){
                 </div>
                 <button className="loginButton">Login</button>
             </div>
-            <img className="heroImage" src={heroImage} alt="" />
+            <div className="heropage">
+                <img className="heroImage" src={heroImage} alt="" />
+                <img src={"../assets/OBJECTS.png"} alt="" />
+                <h1>700+ students saved, and counting</h1>
+                <h2>50K new study notes added every day, from the world’s most active student communities</h2>
+                <img src={"../assets/OBJECTS_CROSS.png"} alt="" />
+            </div>
         </>
     )
 }
