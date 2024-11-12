@@ -30,6 +30,7 @@ header {
   top: 1px;
   left: 388px;
   background-color: white;
+  z-index: 100;
 }
 
 .pageFrame {
@@ -47,7 +48,7 @@ header {
 .pageFrame a {
   font-family: Cormorant;
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 19.38px;
   text-align: left;
   text-underline-position: from-font;
@@ -57,11 +58,335 @@ header {
 
 .heroImage {
   margin-top: 10px;
-  width: 100vw;
+  width: 99.9%;
   border: 0.82px solid #C9C9C9;
   box-shadow: 0px 4px 4px 0px #00000040;
 }
 
-.loginButton {
+button {
   background: #583781;
+  color: white;
+}
+
+.dataPanel .span > img {
+  position: absolute;
+}
+
+#triangles {
+  top: -30px;
+  left: -50px;
+}
+
+#cross {
+  top: 150px;
+  left: 98%;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+h1 {
+  font-weight: 700;
+}
+
+h2 {
+  font-weight: 500;
+}
+
+.data {
+  display: flex;
+  justify-content: space-around;
+}
+
+.dataPanel .span {
+  width: 90%;
+  height: 218px;
+  top: 50px;
+  left: 100px;
+  opacity: 1;
+  background: #FDFDFD;
+  box-shadow: 0px 4px 4px 0px #00000040;
+  display: block;
+  position: relative;
+}
+
+.dataPanel .span > h1 {
+  margin-top: 0px;
+}
+
+.dataPanel .span > h2 {
+  margin: 0px;
+}
+
+.dataitem h1, .dataitem p {
+  margin: 0;
+}
+
+.dataitem p {
+  margin-left: 5px;
+}
+
+.dataitem div{
+  display: flex;
+  justify-content: center;
+}
+
+.theWorld {
+  margin-top: 100px;
+  background: linear-gradient(257.29deg, rgba(153, 124, 152, 0.6) 6.5%, #FFFFFF 18.5%, rgba(159, 13, 118, 0.27) 41%, #FFFFFF 77.5%, rgba(153, 124, 152, 0.4) 90.5%);
+  border-radius: 40px;
+  width: 100%;
+  height: 650px;
+  /* padding-top: 50px; */
+}
+
+.theWorld .heading {
+  width: 840px;
+  height: 265.67px;
+  top: 1208.24px;
+  left: 10vw;
+  position: absolute;
+}
+
+.theWorld h2 {
+  width: 821px;
+  height: 109.07px;
+  top: 1459.93px;
+  left: 10.5vw;
+  position: absolute;
+  text-align: start;
+}
+
+.theWorld .heading h1 {
+  text-align: start;
+  margin-top: 0;
+}
+
+.theWorld button {
+  width: 384px;
+  height: 93.22px;
+  top: 1619.33px;
+  left: 15vw;
+  gap: 0px;
+  border-radius: 15px;
+  background: #5A156B;
+  position: absolute;
+  font-size: 36px;
+  color: #FFFFFF;
+}
+
+#planes {
+  width: 858px;
+  height: 309.49px;
+  top: 1165.36px;
+  left: 45vw;
+  position: absolute;
+}
+
+#people {
+  width: 437.9px;
+  height: 417.29px;
+  top: 1350.72px;
+  left: 60vw;
+  rotate: 0.23 deg;
+  position: absolute;
+}
+
+.components > * {
+  box-shadow: 0px 4px 4px 0px #00000040;
+  border-radius: 15px;
+  border: 1px solid black;
+}
+
+.awesomeFeatures .components, .assistance .components {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.awesomeFeatures h1 {
+  color: #201041;
+  text-shadow: 0px 5px 10px #00000033;
+  margin-bottom: 10px;
+}
+
+.awesomeFeatures h2 {
+  text-shadow: 0px 5px 10px #00000033;
+}
+
+.featurecomp {
+  width: 270px;
+  height: 187px;
+  border-radius: 10px;
+  border: 1px solid black;  
+  /* box-shadow: 0px 8px 16px 0px #00000033; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.featurecomp h2{
+  font-size: 20px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.featurecomp p {
+  font-size: 20px;
+  text-align: center;
+  text-wrap: pretty;
+  color: #464657;
+}
+
+.ourServices {
+  background: #C414681A;
+  box-shadow: 0px 4px 4px 0px #00000040;
+  margin: 50px;
+  padding: 30px;
+}
+
+.servicecomp {
+  width: 250px;
+  height: 250px;
+  border-radius: 15px;
+  border: 1px solid black;
+  background: white;
+  /* box-shadow: 0px 4px 4px 0px #00000040; */
+}
+
+.ourServices .components {
+  display: grid;
+  grid-template: 
+  "a a a a" 250px
+  "a a a a" 250px
+  "a a a a" 250px
+  "a a a a" 250px / 1fr 1fr 1fr 1fr;
+  gap: 60px;
+  justify-items: center;
+}
+
+.servicecomp img {
+  border-radius: 15px 15px 0 0;
+  width: 249.5px;
+}
+
+.servicecomp:nth-child(13) {
+  grid-column: 2 / 3;
+}
+
+.servicecomp:nth-child(14) {
+  grid-column: 3 / 4;
+}
+
+.servicecomp .panel > p {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 29.06px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.servicecomp p {
+  margin: 5px;
+}
+
+.asscomp {
+  width: 220px;
+  height: 220px;
+  background: #EE481447;
+  padding: 15px;
+}
+
+.asscomp h2 {
+  margin-top: 25%;
+  font-weight: 700;
+}
+
+.asscomp p {
+  text-align: center;
+  text-wrap: pretty;
+}
+
+.faq {
+  margin-top: 50px;
+}
+
+.faq > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.faqomponent {
+  box-shadow: 0px 4px 4px 0px #00000040;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin-bottom: 16px;
+}
+
+.faqomponent > p {
+  margin: 15px 0 0 0;
+  line-height: normal;
+}
+
+.faqomponent > p:first-child {
+  font-size: 24px;
+  margin-left: 10px;
+}
+
+.faqomponent > p:last-child {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  margin-right: 10px;
+}
+
+.footer > img:first-child {
+  opacity: 0.4;
+  position: absolute;
+  width: 99.9%;
+}
+
+.footer .lists {
+  margin-left: 5%;
+  display: flex;
+  width: 60%;
+  gap: 20%;
+}
+
+.footer h2 {
+  text-align: start;
+  font-weight: 700;
+  font-size: 32px;
+  color: black;
+}
+
+.footer p {
+  font-size: 20px;
+}
+
+.part {
+  display: flex;
+  justify-content: space-between;
+}
+
+.news {
+  margin-right: 100px;
+  align-self: flex-end;
+}
+
+.footer button {
+  border-radius: 0;
+}
+
+.emailButton {
+  margin-right: 100px;
+}
+
+.subscribeButton {
+  background-color: black;
 }
