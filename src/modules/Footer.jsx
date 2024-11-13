@@ -6,6 +6,7 @@ export default function Footer () {
     return(
         <div className="footer">
             <img src={background} alt="" />
+            <img id="footerPattern" src={design} alt="" />
             <div className="part">                
                 <div className="lists">                
                     <ul>
@@ -34,11 +35,11 @@ export default function Footer () {
                         <p>Important IELTS Articles</p>
                     </ul>
                 </div>
-                <img id="footerPattern" src={design} alt="" />
                 <div className="news">
                     <h2>Newsletter</h2>
                     <p>You can trust us. We only send promo offers,</p>
-                    <button className="emailButton">Your email here</button>
+                    <input className="emailButton" type="text" name="subEmail" id="subEmail" placeholder="Your email here"/>
+                    {/* <button className="emailButton">Your email here</button> */}
                     <button className="subscribeButton">Subscribe</button>
                     <HeaderContainer />
                 </div>

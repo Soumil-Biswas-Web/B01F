@@ -40,6 +40,10 @@ header {
   display: none;
 }
 
+.alt-pageFrame {
+  display: none;
+}
+
 .pageFrame {
   display: grid;
   grid-template: "a a a a a a";
@@ -61,6 +65,11 @@ header {
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
   color: black;
+  transition: .5s;
+}
+
+.pageFrame a:hover {
+  color:#c175ec;
 }
 
 .heroImage {
@@ -73,6 +82,12 @@ header {
 button {
   background: #583781;
   color: white;
+  transition: .5s;
+}
+
+button:hover {
+  background-color: #C9C9C9;
+  color:#5A156B;
 }
 
 .dataPanel .span > img {
@@ -191,10 +206,10 @@ h2 {
   left: 15vw;
   gap: 0px;
   border-radius: 15px;
-  background: #5A156B;
+  /* background: #5A156B; */
   position: absolute;
   font-size: 36px;
-  color: #FFFFFF;
+  /* color: #FFFFFF; */
   margin-top: 450px;
 }
 
@@ -249,6 +264,12 @@ h2 {
   flex-direction: column;
   align-items: center;
   padding-top: 20px;
+  transition: 0.5s;
+}
+
+.featurecomp:hover {
+  transform: translateY(-10px);
+  cursor: pointer;
 }
 
 .featurecomp h2{
@@ -289,6 +310,15 @@ h2 {
   "a a a a" 1fr / 1fr 1fr 1fr 1fr;
   gap: 60px;
   justify-items: center;
+}
+
+.servicecomp {
+  transition: 0.5s;
+}
+
+.servicecomp:hover {
+  transform: translateY(-10px);
+  cursor: pointer;
 }
 
 .servicecomp .main-img {
@@ -334,6 +364,12 @@ h2 {
   background: #EE481447;
   padding: 15px;
   z-index: 10;
+  transition: 0.5s;
+}
+
+.asscomp:hover {
+  transform: translateY(-10px);
+  cursor: pointer;
 }
 
 .asscomp h2 {
@@ -399,6 +435,15 @@ h2 {
   margin-right: 10px;
 }
 
+#faqarrow {
+  transition: 0.5s;
+}
+
+#faqarrow:hover {
+  color: #641566;
+  cursor: pointer;
+}
+
 .footer > img:first-child {
   opacity: 0.4;
   position: absolute;
@@ -407,10 +452,11 @@ h2 {
 }
 
 .footer .lists {
-  margin-left: 5%;
+  /* margin-left: 5%; */
   display: flex;
   width: 60%;
   gap: 20%;
+  z-index: 50;
 }
 
 .footer h2 {
@@ -424,10 +470,26 @@ h2 {
   font-size: 20px;
 }
 
+.footer .lists p {
+  transition: 0.5s;
+}
+
+.footer .lists p:hover {
+  color: #c175ec;
+  cursor: pointer;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+}
+
 .part {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  width: 80vw;
   height: 550px;
+  transform: skewX(-5deg);
 }
 
 .news {
@@ -442,16 +504,32 @@ h2 {
 
 .emailButton {
   margin-right: 100px;
+  border: none;
+  background-color: #5A156B;
+  color: white;
+  text-align: center;
+  padding: 12.5px 0;
 }
 
+::placeholder {
+  color: white;
+  opacity: 1;
+}
+
+input:focus-visible {
+  border: none;
+  outline: none;
+  border-radius: 0;
+}
 .subscribeButton {
   background: #BA4396;
 }
 
 #footerPattern {
   position: absolute;
-  right: 0px;
+  right: 0;
   height: 594.08px;
+  /* transform: skewX(5deg); */
   /* width: 99.9%; */
 }
 
@@ -473,6 +551,31 @@ h2 {
 
   header, .pageFrame, #triangles, #cross, #vert-triangles, #vert-cross, #footerPattern {
     display: none;
+  }
+
+  .alt-pageFrame {
+    display: flex;
+    position: fixed;
+    right: 0;
+    width: 60vw;
+    height: 100vh;
+    align-self: baseline;
+    flex-direction: column;
+    align-items: start;
+    transform: translateX(80vw);
+    z-index: 101;
+    background-color: rgba(197, 197, 197, 0.75);
+    transition: 1s;
+  }
+
+  .alt-pageFrame.active {
+    transform: translateX(0);
+    transition: 0.5s;
+  }
+
+  .alt-pageFrame a {
+    margin: 30px 0 0 30px;
+    color: black;
   }
 
   #navWindow {
@@ -627,5 +730,6 @@ h2 {
 
   .emailButton {
     margin-bottom: 10px;
+    padding: 1.8vh 0;
   }
 }
