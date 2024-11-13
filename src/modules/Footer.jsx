@@ -1,5 +1,6 @@
 import background from "../assets/footer_background.png"
 import design from "../assets/footer_design.png"
+import HeaderContainer from "./HeaderContainer"
 
 export default function Footer () {
     return(
@@ -33,15 +34,15 @@ export default function Footer () {
                         <p>Important IELTS Articles</p>
                     </ul>
                 </div>
+                <img id="footerPattern" src={design} alt="" />
                 <div className="news">
                     <h2>Newsletter</h2>
                     <p>You can trust us. We only send promo offers,</p>
                     <button className="emailButton">Your email here</button>
                     <button className="subscribeButton">Subscribe</button>
+                    <HeaderContainer />
                 </div>
             </div>
-
-            <img src={design} alt="" />
         </div>
     )
 }

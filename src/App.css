@@ -10,11 +10,14 @@ header {
 
 .headerContainer {
   margin-right: 20px;
+  display: flex;
+  align-items: center;
 }
 
 .headerContainer button {
   background-color: transparent;
   padding: 10px;
+  height: 42px;
 }
 
 .headerContainer button img{
@@ -31,6 +34,10 @@ header {
   left: 388px;
   background-color: white;
   z-index: 100;
+}
+
+#navWindow {
+  display: none;
 }
 
 .pageFrame {
@@ -144,18 +151,20 @@ h2 {
 .theWorld .heading {
   width: 840px;
   height: 265.67px;
-  top: 1208.24px;
+  /* top: 1208.24px; */
   left: 10vw;
   position: absolute;
+  margin-top: 30px;
 }
 
 .theWorld h2 {
   width: 821px;
   height: 109.07px;
-  top: 1459.93px;
+  /* top: 1459.93px; */
   left: 10.5vw;
   position: absolute;
   text-align: start;
+  margin-top: 300px;
 }
 
 .theWorld .heading h1 {
@@ -163,10 +172,22 @@ h2 {
   margin-top: 0;
 }
 
+.theWorld .heading h1:nth-child(1) {
+  color: #cc1b97;
+}
+
+.theWorld .heading h1:nth-child(2) {
+  color: #5A156B;
+}
+
+.theWorld .heading h1:nth-child(3) {
+  color: #c175ec;
+}
+
 .theWorld button {
   width: 384px;
   height: 93.22px;
-  top: 1619.33px;
+  /* top: 1619.33px; */
   left: 15vw;
   gap: 0px;
   border-radius: 15px;
@@ -174,23 +195,26 @@ h2 {
   position: absolute;
   font-size: 36px;
   color: #FFFFFF;
+  margin-top: 450px;
 }
 
 #planes {
   width: 858px;
   height: 309.49px;
-  top: 1165.36px;
+  /* top: 1165.36px; */
   left: 45vw;
   position: absolute;
+  margin-top: 30px;
 }
 
 #people {
   width: 437.9px;
   height: 417.29px;
-  top: 1350.72px;
+  /* top: 1350.72px; */
   left: 60vw;
   rotate: 0.23 deg;
   position: absolute;
+  margin-top: 230px;
 }
 
 .components > * {
@@ -259,17 +283,28 @@ h2 {
 .ourServices .components {
   display: grid;
   grid-template: 
-  "a a a a" 250px
-  "a a a a" 250px
-  "a a a a" 250px
-  "a a a a" 250px / 1fr 1fr 1fr 1fr;
+  "a a a a" 1fr
+  "a a a a" 1fr
+  "a a a a" 1fr
+  "a a a a" 1fr / 1fr 1fr 1fr 1fr;
   gap: 60px;
   justify-items: center;
 }
 
-.servicecomp img {
+.servicecomp .main-img {
   border-radius: 15px 15px 0 0;
   width: 249.5px;
+}
+
+.servicecomp .panel div {
+  display: flex;
+  margin-left: 5px;
+}
+
+.star {
+  width: 18px;
+  color: #c1a8c7;
+  fill: #5A156B;
 }
 
 .servicecomp:nth-child(13) {
@@ -290,7 +325,7 @@ h2 {
 }
 
 .servicecomp p {
-  margin: 5px;
+  margin: 0 0 0 5px;
 }
 
 .asscomp {
@@ -298,6 +333,7 @@ h2 {
   height: 220px;
   background: #EE481447;
   padding: 15px;
+  z-index: 10;
 }
 
 .asscomp h2 {
@@ -308,6 +344,24 @@ h2 {
 .asscomp p {
   text-align: center;
   text-wrap: pretty;
+}
+
+.assistance > img {
+  position: absolute;
+  z-index: 0;
+}
+
+#vert-triangles {
+  rotate: -90deg;
+  right: 20px;
+  margin-right: 200px;
+  margin-top: -300px;
+}
+
+#vert-cross {
+  rotate: 180deg;
+  left: 15%;
+  margin-top: -50px;
 }
 
 .faq {
@@ -349,6 +403,7 @@ h2 {
   opacity: 0.4;
   position: absolute;
   width: 99.9%;
+  height: 594.08px;
 }
 
 .footer .lists {
@@ -372,11 +427,13 @@ h2 {
 .part {
   display: flex;
   justify-content: space-between;
+  height: 550px;
 }
 
 .news {
   margin-right: 100px;
   align-self: flex-end;
+  z-index: 10;
 }
 
 .footer button {
@@ -388,5 +445,187 @@ h2 {
 }
 
 .subscribeButton {
+  background: #BA4396;
+}
+
+#footerPattern {
+  position: absolute;
+  right: 0px;
+  height: 594.08px;
+  /* width: 99.9%; */
+}
+
+.footer .headerContainer {
   background-color: black;
+  margin-right: 0;
+  margin-top: 30px;
+  width: 252px;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 15px;
+  }
+
+  header, .pageFrame, #triangles, #cross, #vert-triangles, #vert-cross, #footerPattern {
+    display: none;
+  }
+
+  #navWindow {
+    display: block;
+  }
+
+  .heroImage {
+    border: none;
+  }
+
+  .dataPanel .span {
+    left: 5vw;
+    height: auto;
+    box-shadow: none;
+  }
+
+  .dataPanel .span .data {
+    margin-top: 10px;
+  }
+
+  .theWorld {
+    height: 55vh;
+  }
+
+  .theWorld .heading {
+    width: auto;
+    height: auto;
+  }
+
+  .theWorld h2 {
+    width: auto;
+    margin-top: 45vw;
+  }
+
+  .theWorld button {
+    width: auto;
+    height: 10vw;
+    border-radius: 2vw;
+    font-size: 13px;
+    margin-top: 80vw;
+    left: 10vw
+
+  }
+
+  #planes {
+    width: 65vw;
+    height: 30vw;
+    right: 1px;
+    left: auto;
+  }  
+
+  #people {
+    width: 40vw;
+    height: 40vw;
+    right: 5vw;
+    /* left: auto; */
+    margin-top: 70vw;
+  }
+
+  .awesomeFeatures .components, .assistance .components {
+    flex-wrap: wrap;
+    gap: 5vw;
+  }
+
+  .featurecomp {
+    width: 40vw;
+  }
+
+  .featurecomp h2, .featurecomp p{
+    font-size: 13px;
+  }
+
+  .ourServices {
+    margin: 2vw;
+    padding: 5vw;
+  }
+
+  .ourServices .components {
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    grid-template: 
+    "a a" 1fr
+    "a a" 1fr
+    "a a" 1fr
+    "a a" 1fr
+    "a a" 1fr
+    "a a" 1fr      
+    "a a" 1fr / 1fr 1fr;
+    gap: 20px;
+  }
+
+  .servicecomp {
+    width: 40vw;
+    height: 53vw;
+    border-radius: 3px;
+  }
+
+  .servicecomp:nth-child(13), .servicecomp:nth-child(14) {
+    grid-column: auto;
+  }
+
+  .servicecomp .main-img {
+    border-radius: 3px;
+    /* width: calc(30vw - 1px); */
+    width: 40vw;
+  }
+
+  .servicecomp .panel > p {
+    font-size: 16px;
+  }
+
+  .asscomp {
+    width: 35vw;
+    height: auto;
+  }
+
+  .faq h1 {
+    font-size: 25px;
+  }
+
+  .faqomponent {
+    width: 90vw;
+  }
+
+  .faqomponent > p:first-child {
+    font-size: 16px;
+  }
+
+  .part {
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 600px;
+  }
+
+  .part .lists ul{
+    padding-inline-start: 0;
+  }
+
+
+  .footer > img:first-child {
+    height: 600px;
+  }
+
+  .footer h2, .footer p {
+    font-size: 15px;
+    margin: 0;
+  }
+
+  .news {
+    margin: 0 10vw;
+    align-self: auto;
+  }
+
+  .emailButton {
+    margin-bottom: 10px;
+  }
 }

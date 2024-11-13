@@ -3,6 +3,9 @@ import books from "../assets/awesomeFeatures/books.png"
 import pdf from "../assets/awesomeFeatures/pdf.png"
 import formPage from "../assets/awesomeFeatures/form.png"
 
+import triangles from "../assets/OBJECTS.png"
+import cross from "../assets/OBJECTS_CROSS.png"
+
 import AssComp from "./Asscomp"
 
 export default function Assistance() {
@@ -28,7 +31,8 @@ export default function Assistance() {
                     desc="Get your schoolwork redone as many times as you like till you are happy."
                 />
             </div>
-
+            <img id="vert-triangles" src={triangles} alt="" />
+            <img id="vert-cross" src={cross} alt="" />
         </div>
     )
 }
