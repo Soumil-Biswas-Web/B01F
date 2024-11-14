@@ -140,7 +140,7 @@ button:hover {
 
 #cross {
   top: 150px;
-  left: 98%;
+  right: 2%;
 }
 
 h1, h2 {
@@ -203,7 +203,7 @@ h2 {
 }
 
 .heading {
-  width: 840px;
+  width: 50vw;
   height: 265.67px;
   /* top: 1208.24px; */
   left: 10vw;
@@ -212,7 +212,7 @@ h2 {
 }
 
 .heropage h2, .theWorld h2 {
-  width: 821px;
+  width: 50vw;
   height: 109.07px;
   /* top: 1459.93px; */
   left: 10.5vw;
@@ -220,6 +220,7 @@ h2 {
   text-align: start;
   margin-top: 300px;
   text-wrap: pretty;
+  z-index: 5;
 }
 
 .heading h1 {
@@ -251,13 +252,14 @@ h2 {
   font-size: 36px;
   /* color: #FFFFFF; */
   margin-top: 450px;
+  z-index: 5;
 }
 
 #planes {
   width: 858px;
   height: 309.49px;
   /* top: 1165.36px; */
-  left: 45vw;
+  right: 0;
   position: absolute;
   margin-top: 30px;
   z-index: 1;
@@ -267,7 +269,7 @@ h2 {
   width: 437.9px;
   height: 417.29px;
   /* top: 1350.72px; */
-  left: 60vw;
+  right: 0;
   rotate: 0.23 deg;
   position: absolute;
   margin-top: 230px;
@@ -601,19 +603,52 @@ input:focus-visible {
   width: 252px;
 }
 
-@media (max-width: 600px) {
-  h1 {
-    font-size: 20px;
+@media (max-width: 1600px) {
+  .footer {
+    height: auto;
   }
 
-  h2 {
-    font-size: 15px;
+  .footer > img:first-child {
+    height: 100%;
   }
 
+  #footerPattern {
+    display: none;
+  }
+
+  .part {
+    flex-direction: column;
+    justify-content: flex-start;
+    height: auto;
+  }
+}
+
+@media (max-width: 1400px) {
+
+  .ourServices .components {
+    gap: 0.5vw;
+  }
+
+  .servicecomp {
+    width: 15vw;
+  }
+
+  .servicecomp .main-img {
+    width: 15vw;
+  }
+
+  .star {
+    width: 1vw;
+  }
+
+}
+
+@media (max-width: 1000px) {
   header, .pageFrame, #triangles, #cross, #vert-triangles, #vert-cross, #footerPattern {
     display: none;
   }
 
+  
   .alt-pageFrame {
     display: flex;
     position: fixed;
@@ -641,6 +676,27 @@ input:focus-visible {
 
   #navWindow {
     display: block;
+  }
+
+  .heropage h1 {
+    width: 60vw;
+    font-size: 20px;
+  }
+
+  .heropage h2 {
+    width: 40vw;
+    font-size: 18px;
+    margin-top: 110px;
+  }
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 15px;
   }
 
   .imgdiv {
@@ -772,6 +828,10 @@ input:focus-visible {
 
   .servicecomp .panel > p {
     font-size: 16px;
+  }
+
+  .star {
+    width: 18px;
   }
 
   .asscomp {
