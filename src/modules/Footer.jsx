@@ -1,8 +1,34 @@
 import background from "../assets/footer_background.png"
 import design from "../assets/footer_design.png"
 import HeaderContainer from "./HeaderContainer"
+import { useState } from "react"
+
+import './modal.css'
 
 export default function Footer () {
+    const [modal, setModal] = useState(false);
+
+    const toggleModal = () => {
+        setModal(!modal);
+    };
+
+    const [email, setEmail] = useState("Email>>")
+    
+    const saveInfo = (e) => {
+        e.preventDefault();
+        toggleModal();
+        const form = document.querySelector("#subscriptionForm");
+        const data = new FormData(form);
+        setEmail(data.get("subEmail"));
+        console.log("email set");
+    }
+  
+    if(modal) {
+      document.body.classList.add('active-modal');
+    } else {
+      document.body.classList.remove('active-modal')
+    }
+
     return(
         <div className="footer">
             <img src={background} alt="" />
@@ -38,12 +64,25 @@ export default function Footer () {
                 <div className="news">
                     <h2>Newsletter</h2>
                     <p>You can trust us. We only send promo offers,</p>
-                    <input className="emailButton" type="text" name="subEmail" id="subEmail" placeholder="Your email here"/>
-                    {/* <button className="emailButton">Your email here</button> */}
-                    <button className="subscribeButton">Subscribe</button>
+                    <form id="subscriptionForm" onSubmit={saveInfo}>
+                        <input className="emailButton" type="email" name="subEmail" id="subEmail" placeholder="Your email here" required/>
+                        <button className="subscribeButton" type="submit">Subscribe</button>
+                    </form>
                     <HeaderContainer />
                 </div>
             </div>
+            {modal && (
+                <div className="modal">
+                    <div onClick={toggleModal} className="overlay">
+                        <div className="modal-content">
+                            <h2>Thank you for subscribing!</h2>
+                            <p>{"You will now recieve notifications at " + email + " in your email."}</p>
+                            {/* <p>You will now recieve notifications in your email.</p> */}
+                            <button onClick={toggleModal}>Go back</button>                            
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
     )
 }
