@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { ArrowBigLeft, ArrowBigRight } from "lucide-react";
+import { ArrowBigLeft, ArrowBigRight, CircleDot, Circle } from "lucide-react";
 import heroImage from "../assets/image1.png"
 
 const imgArray = [heroImage, heroImage, heroImage, heroImage]
@@ -19,8 +19,7 @@ export default function HeroPage() {
             if (index === imgArray.length - 1) return 0;
             return index + 1;
         })
-    }
-
+    }   
 
     return(
         <div className="heropage">
@@ -37,6 +36,13 @@ export default function HeroPage() {
                 <button id="imgArrowRight" onClick={nextImage}>
                     <ArrowBigRight />
                 </button>
+                <div className="dots">
+                    {imgArray.map((url ,index) => (
+                        <button onClick={() => setImgIndex(index)} key={index + "o"}>
+                            {index === imgIndex ? <CircleDot width={"5vw"}/> : <Circle width={"5vw"}/>}                            
+                        </button>
+                    ))}
+                </div>
                 <div className="heading">
                     <h1>Navigate Your</h1>
                     <h1>Academic Journey</h1>

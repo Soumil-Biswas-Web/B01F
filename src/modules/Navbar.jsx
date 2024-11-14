@@ -1,5 +1,6 @@
 import HeaderContainer from "./HeaderContainer"
 import navWindow from "../assets/navBar/navWindow.svg"
+import { X } from "lucide-react";
 
 import theASSignerlogo from "../assets/theASSignerlogo_2.svg"
 import { useState } from "react"
@@ -7,7 +8,10 @@ import { useState } from "react"
 function Navbar(){
     const [sidebar, setSidebar] = useState(false);
 
-    const ShowSidebar = () => setSidebar(!sidebar);
+    const ShowSidebar = (e) => {
+        e.preventDefault();
+        setSidebar(!sidebar);
+    }
 
     return(
         <>
@@ -27,7 +31,7 @@ function Navbar(){
                 <button className="loginButton">Login</button>
                 <img id="navWindow" src={navWindow} alt="" onClick={ShowSidebar}/>
                 <div className={sidebar ? "alt-pageFrame active" : "alt-pageFrame"}>
-                    <a href="" onClick={ShowSidebar}>[Close]</a>
+                    <a href="" onClick={ShowSidebar}><X/></a>
                     <a href="">Home</a>
                     <a href="">About Us</a>
                     <a href="">Blog</a>

@@ -118,6 +118,36 @@ header {
   right: 0;
 }
 
+.dots {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  margin-top: 10px;
+}
+
+.dots button{
+  position: static;
+  background: none;
+  border-radius: 30px;
+  /* width: 20px; */
+  transition: .5s;
+}
+
+.dots button:hover{
+  background: none;
+  scale: 1.2;
+}
+
+.dots button>*{
+  stroke: white;
+  fill: #583781;
+}
+
 button {
   background: #583781;
   color: white;
